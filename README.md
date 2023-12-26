@@ -1,9 +1,9 @@
-<div style="text-align: center">
+<h1 align="center">T Code</h1>
 
-# T Code
+<p align="center">
+<img src="imgs/other/t-code-100x100.png" style="width: 100px;">
+</p>
 
-<img src="imgs/other/t-code.png" style="width: 100px; image-rendering: pixelated;">
-
+<p align="center">
 A text to image cryptography
-
-</div>
+</p>
