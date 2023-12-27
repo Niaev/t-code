@@ -1,9 +1,26 @@
 import re
 
 def transform_periods(t: str):
+    """Transform '?' and '!' in periods ('.').
+    
+    Arguments:
+        t {str} -- User input text
+
+    Returns:
+        {str} -- Processed text
+    """
     return re.sub(r'[!?]', '.', t)
 
 def transform_numbers(t: str):
+    """Transform digits in numbers in words.
+
+    Arguments:
+        t {str} -- User input text
+
+    Returns:
+        {str} -- Processed text
+    """
+
     # Numbers dictionary
     d = {
         '0': 'zero ',
@@ -34,9 +51,35 @@ def transform_numbers(t: str):
     return t
 
 def remove_useless_chars(t: str):
+    """Remove all characters that aren't in the T Code alphabet, which 
+    are the common alphabet, period and space.
+
+    This function assumes that the inputted text is already in lower 
+    case.
+
+    Arguments:
+        t {str} -- User input text
+
+    Returns:
+        {str} -- Processed text
+    """
     return re.sub(r'[^a-z. ]', '', t)
 
 def clear_text(t: str):
+    """Transform the input text in a T Code friendly text.
+
+    This task includes transforming all characters to lower case,
+    transforming periods with 'transform_periods', transforming
+    numbers with 'transform_numbers' and removing useless characters
+    with 'remove_useless_chars'.
+
+    Arguments:
+        t {str} -- User input text
+
+    Returns:
+        {str} -- Processed text
+    """
+
     t = t.lower()
     t = transform_periods(t)
     t = transform_numbers(t)
