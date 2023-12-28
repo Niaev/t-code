@@ -10,18 +10,18 @@ A text to image cryptography
 
 ## Table of contents
 
-* [What is it?]()
+* [What is it?](#what-is-it)
 
-* [How does "T Code" it work?]()
-  * [Alphabet]()
-  * [Forming sentences]()
+* [How does "T Code" work?](#how-does-t-code-work)
+  * [Alphabet](#alphabet)
+  * [Forming sentences](#forming-sentences)
 
-* [How to use "T Code" Python script encoder?]()
-  * [Requirements]()
-  * [Using CLI encoder]()
-  * [Using it on code]()
+* [How to use "T Code" Python script encoder?](#how-to-use-t-code-python-script-encoder)
+  * [Requirements](#requirements)
+  * [Using CLI encoder](#using-cli-encoder)
+  * [Using it on code](#using-it-on-code)
 
-* [Decoder?]()
+* [Decoder?](#decoder)
 
 ## What is it?
 
@@ -125,7 +125,7 @@ python3 index.py [TEXT] [[save]] [[OUTPUT]]
 
 The whole algorithm is based on three main functions: `clear_text`, `get_text_array`, `matrix_to_image`.
 
-* `clear_text` - It will basically transform the text as said in [alphabet section]().
+* `clear_text` - It will basically transform the text as said in [alphabet section](#alphabet).
 * `get_text_array` - With the text already correctly processed, it will create an array that corresponds to the final image, but with `0` on empty spaces, the actual chars on the correct spots and the initial char plus a `*` that indicates the first symbol/letter.
 * `matrix_to_image` - With the generated matrix, it just creates the image and returns it as an object.
 
