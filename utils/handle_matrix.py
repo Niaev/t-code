@@ -103,10 +103,7 @@ def get_text_array(t: str) -> list:
                     # Means a new line of zeros needs to be added on 
                     # Top of the array
                     nli = [0 for i in range(yn)]
-                    nlj = l
-                    l = []
-                    l.append(nli)
-                    l.extend(nlj)
+                    l = [nli, *l]
                     # Here xi is set to be 0, because it can't be 
                     # Lower than that
                     xi = 0
