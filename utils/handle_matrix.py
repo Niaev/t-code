@@ -7,7 +7,7 @@ def print_biarray(m: list):
         print('    ' + json.dumps(line) + ',')
     print(']')
 
-def get_direction(char: str):
+def get_direction(char: str) -> int:
     """Get direction of the next char based on the current char
 
     The values in d {dict} are arbitrary, based actually on the images
@@ -35,7 +35,7 @@ def get_direction(char: str):
 
     return d[char]
 
-def get_text_array(t: str):
+def get_text_array(t: str) -> list:
     """Get array with zeros on empty spaces and each letter/char at 
     the desired position
 

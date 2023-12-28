@@ -1,6 +1,6 @@
 import re
 
-def transform_periods(t: str):
+def transform_periods(t: str) -> str:
     """Transform '?' and '!' in periods ('.').
     
     Arguments:
@@ -50,7 +50,7 @@ def transform_numbers(t: str):
 
     return t
 
-def remove_useless_chars(t: str):
+def remove_useless_chars(t: str) -> str:
     """Remove all characters that aren't in the T Code alphabet, which 
     are the common alphabet, period and space.
 
@@ -65,7 +65,7 @@ def remove_useless_chars(t: str):
     """
     return re.sub(r'[^a-z. ]', '', t)
 
-def clear_text(t: str):
+def clear_text(t: str) -> str:
     """Transform the input text in a T Code friendly text.
 
     This task includes transforming all characters to lower case,

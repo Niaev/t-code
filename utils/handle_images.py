@@ -4,7 +4,7 @@ img_folder = 'imgs/'
 abc_img = img_folder + 'alphabet/'
 other_img = img_folder + 'other/'
 
-def get_image(char: str):
+def get_image(char: str) -> 'PIL.Image.Image':
     """Get correspondent image object of the given single char
 
     Arguments:
@@ -25,6 +25,6 @@ def get_image(char: str):
 
     return img
 
-def border_image():
+def border_image() -> 'PIL.Image.Image':
     """Get image object of the border"""
     return Image.open(other_img + 'border.png')
