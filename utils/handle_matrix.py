@@ -70,7 +70,7 @@ def get_text_array(t: str) -> list:
             # Placing first char in position (0, 0)
             last_xi = 0
             last_yi = 0
-            l[0].append(c.upper())
+            l[0].append('*' + c.lower())
         else:
             # Any other char hits this part
             

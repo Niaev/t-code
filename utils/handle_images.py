@@ -57,12 +57,12 @@ def matrix_to_image(l: list) -> 'PIL.Image.Image':
                 x_offset += 16
                 continue
                 
-            c = oc.lower()
+            c = oc.lower()[-1]
 
             char_img = get_image(c)
             img.paste(char_img, (x_offset, y_offset))
 
-            if oc == c.upper() and oc != ' ' and oc != '.':
+            if len(oc) == 2 and oc[0] == '*':
                 img.paste(border_img, (x_offset, y_offset), border_img)
 
             x_offset += 16
